@@ -196,6 +196,30 @@ nav.scrolled {
   z-index: 1;
 }
 
+/* Card Expansion for Clicking */
+.card:has(.card-link) {
+  cursor: pointer;
+}
+
+.card-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+/* Ensure buttons and other tags stay above the clickable overlay */
+.card .btn,
+.card .skills-grid,
+.card h3,
+.card p {
+  position: relative;
+  z-index: 6;
+}
+
 /* Focus Effect: Lift hovered card */
 .grid:hover .card {
   transform: translateY(0);
@@ -206,6 +230,55 @@ nav.scrolled {
   border-color: var(--primary);
   z-index: 2;
   box-shadow: 0 20px 40px rgba(168, 122, 122, 0.4);
+}
+
+/* Horizontal Scroll Container */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 50px 40px 80px 40px;
+  /* Extra padding for card hover effect */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll .card {
+  flex: 0 0 400px;
+  /* Standardized width for all horizontal scroll cards */
+  scroll-snap-align: start;
+}
+
+
+/* Custom Scrollbar */
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+  border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Ensure focus effect works with horizontal scroll */
+.horizontal-scroll:hover .card {
+  transform: translateY(0);
+}
+
+.horizontal-scroll .card:hover {
+  transform: translateY(-15px) scale(1.05);
+  /* Slightly less scale to prevent overlapping issues */
 }
 
 /* Skills */
@@ -289,8 +362,8 @@ footer {
   align-items: center;
   gap: 0;
   padding: 8px;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   border-radius: 100px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
