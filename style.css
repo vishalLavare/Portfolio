@@ -361,7 +361,8 @@ footer {
   border-color: var(--primary);
 }
 
-.social-links a.phone-link {
+.social-links a.phone-link,
+.social-links a.email-link {
   font-size: 1rem;
   font-weight: 600;
   display: flex;
@@ -379,7 +380,8 @@ footer {
   justify-content: center;
 }
 
-.social-links a.phone-link span {
+.social-links a.phone-link span,
+.social-links a.email-link span {
   width: 0;
   opacity: 0;
   white-space: nowrap;
@@ -387,8 +389,8 @@ footer {
   font-size: 0.9rem;
 }
 
-.social-links a.phone-link:hover {
-  width: 170px;
+.social-links a.phone-link:hover,
+.social-links a.email-link:hover {
   background: var(--primary);
   color: #000 !important;
   border-color: var(--primary);
@@ -398,7 +400,16 @@ footer {
   justify-content: flex-start;
 }
 
-.social-links a.phone-link:hover span {
+.social-links a.phone-link:hover {
+  width: 170px;
+}
+
+.social-links a.email-link:hover {
+  width: 240px;
+}
+
+.social-links a.phone-link:hover span,
+.social-links a.email-link:hover span {
   width: auto;
   opacity: 1;
 }
