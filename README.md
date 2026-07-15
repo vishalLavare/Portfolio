@@ -16,7 +16,7 @@ A premium, modern, and responsive DevOps engineering portfolio designed with a s
 - **📱 Fully Responsive**: Optimized for all devices—from mobile phones to high-resolution desktops.
 - **🎭 Micro-animations**: Smooth reveal-on-scroll effects and interactive hover states.
 - **🛠️ Tech Arsenal**: Dedicated sections for Cloud (AWS/Azure), DevOps tools, and Infrastructure as Code.
-- **📂 Project Showcase**: Highlights featured infrastructures like Three-Tier architecture and IaC with Terraform.
+- **📂 Project Showcase**: Highlights featured infrastructures like Serverless File Processing pipeline, Three-Tier architecture, and IaC with Terraform.
 - **📄 Instant CV Access**: Direct link to professional resume via Google Drive.
 
 ## 🛠️ Built With
