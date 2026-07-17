@@ -6,7 +6,7 @@
 
 A premium, modern, and responsive DevOps engineering portfolio designed with a sleek dark-themed "Glassmorphism" aesthetic. This project showcases technical expertise in AWS, Azure, CI/CD automation, and cloud-native architectures.
 
-🚀 **[View Live Demo](https://vishallavare.github.io/Portfolio/)** *(Ensure GitHub Pages is enabled)*
+🚀 **[View Live Demo](https://vishallavare.github.io/Portfolio/)**
 
 ---
 
