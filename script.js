@@ -70,3 +70,65 @@ if (mobileToggle && navLinks && navOverlay) {
         link.addEventListener('click', closeMenu);
     });
 }
+
+// Horizontal Scroll Navigation Controls
+const initHorizontalScroll = () => {
+    const scrollWrappers = document.querySelectorAll('.scroll-wrapper');
+
+    scrollWrappers.forEach(wrapper => {
+        const container = wrapper.querySelector('.horizontal-scroll');
+        const leftBtn = wrapper.querySelector('.scroll-btn-left');
+        const rightBtn = wrapper.querySelector('.scroll-btn-right');
+
+        if (!container || !leftBtn || !rightBtn) return;
+
+        const updateButtonState = () => {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            if (container.scrollLeft <= 10) {
+                leftBtn.classList.add('disabled');
+            } else {
+                leftBtn.classList.remove('disabled');
+            }
+
+            if (container.scrollLeft >= maxScroll - 10) {
+                rightBtn.classList.add('disabled');
+            } else {
+                rightBtn.classList.remove('disabled');
+            }
+        };
+
+        const getScrollAmount = () => {
+            const firstCard = container.querySelector('.card');
+            if (firstCard) {
+                const style = window.getComputedStyle(container);
+                const gap = parseFloat(style.gap) || 30;
+                return firstCard.offsetWidth + gap;
+            }
+            return container.clientWidth * 0.75;
+        };
+
+        leftBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: -getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        container.addEventListener('scroll', updateButtonState);
+        window.addEventListener('resize', updateButtonState);
+
+        // Initial check
+        updateButtonState();
+    });
+};
+
+initHorizontalScroll();
+window.addEventListener('load', initHorizontalScroll);
+
