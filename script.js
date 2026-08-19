@@ -42,3 +42,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Mobile Navigation Sidebar Toggle
+const mobileToggle = document.getElementById('mobile-toggle');
+const navLinks = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
+
+if (mobileToggle && navLinks && navOverlay) {
+    const toggleMenu = () => {
+        navLinks.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        mobileToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    };
+
+    const closeMenu = () => {
+        navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
+        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    };
+
+    mobileToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking on any nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}

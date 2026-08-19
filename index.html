@@ -23,7 +23,10 @@
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">VISHAL.<span class="gradient-text">IO</span></a>
-            <ul class="nav-links">
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -33,17 +36,18 @@
             </ul>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <section class="hero">
         <div class="container hero-content">
-            <h1 class="reveal">DevOps & Cloud Engineer | <span class="gradient-text">AWS, Azure & Scalable
-                    Systems</span></h1>
+            <h1 class="reveal">DevOps & Cloud Engineer | <span class="gradient-text">AWS | Manual & API Testing |
+                    CI/CD</span></h1>
             <p class="reveal">Vishal Lavare — DevOps & Cloud Engineer specializing in AWS/Azure automation,
                 high-availability data systems, and CI/CD optimization.</p>
-            <div class="reveal">
+            <div class="reveal hero-btns">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="https://drive.google.com/file/d/1nPj33LDtoOP0WvOGYcjnbsASsHYijbDY/view?usp=sharing"
-                    target="_blank" class="btn btn-cv" style="margin-left:15px;"><i class="fas fa-download"></i>
+                    target="_blank" class="btn btn-cv"><i class="fas fa-download"></i>
                     Download CV</a>
             </div>
         </div>
@@ -52,9 +56,11 @@
     <section id="about" class="container">
         <h2 class="section-title reveal">Professional <span class="gradient-text">Summary</span></h2>
         <div class="glass card reveal" style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <p>Motivated and detail-oriented DevOps Engineer with hands-on experience in AWS, Azure, and cloud
-                infrastructure management. Skilled in implementing CI/CD pipelines, Docker containerization, and
-                automation using GitHub Actions and Jenkins.</p>
+            <p>Motivated and detail-oriented Cloud Engineer & DevOps professional with hands-on experience in AWS,
+                Azure, and cloud infrastructure management. Skilled in implementing CI/CD pipelines, Docker
+                containerization, Kubernetes, Terraform, and automation using GitHub Actions and Jenkins. Experienced in
+                Manual Testing, Functional Testing, UI Testing, API Testing, and Postman for validating web
+                applications, REST APIs, responsive interfaces, and application workflows.</p>
             <p style="margin-top: 20px; color: var(--text-dim);">Proficient in managing and deploying applications with
                 strong expertise in SQL databases including PostgreSQL, Oracle, and RDS. Experienced in Linux
                 administration, shell scripting, cloud monitoring, and scalable architecture design.</p>
@@ -138,14 +144,21 @@
 
                 <!-- Software Testing & QA -->
                 <div class="glass card reveal">
-                    <h3 style="margin-bottom:20px; color: var(--primary);"><i class="fas fa-vial"></i> Software Testing & QA
+                    <h3 style="margin-bottom:20px; color: var(--primary);"><i class="fas fa-vial"></i> Software Testing
+                        & QA
                     </h3>
                     <div class="skills-grid" style="justify-content: flex-start;">
-                        <span class="skill-tag">Functional Testing</span>
-                        <span class="skill-tag">UI UX Testing</span>
-                        <span class="skill-tag">API Testing</span>
                         <span class="skill-tag">Manual Testing</span>
+                        <span class="skill-tag">Functional Testing</span>
+                        <span class="skill-tag">API Testing</span>
                         <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">REST API Testing</span>
+                        <span class="skill-tag">Regression Testing</span>
+                        <span class="skill-tag">Integration Testing</span>
+                        <span class="skill-tag">UI UX Testing</span>
+                        <span class="skill-tag">Test Case Design</span>
+                        <span class="skill-tag">Test Execution</span>
+                        <span class="skill-tag">Bug Reporting</span>
                     </div>
                 </div>
 
@@ -196,6 +209,9 @@
                     <li>Deployed and managed AWS services including EC2, S3, RDS, CloudFront, Lambda, and EventBridge.
                     </li>
                     <li>Designed and maintained CI/CD pipelines with GitHub Actions for mechanized builds and testing.
+                    </li>
+                    <li>Performed manual testing of web applications across desktop and mobile views, validated REST
+                        APIs using Postman, verified autofill and application workflows, and reported functional issues.
                     </li>
                     <li>Implemented Auto Scaling and automated instance start/stop scheduling for cost optimization.
                     </li>
@@ -254,22 +270,25 @@
 
                 <!-- Project 3 -->
                 <div class="glass card reveal">
-                    <h3>Student Management System (Full-Stack)</h3>
+                    <h3>Student Management System (Full-Stack & QA Testing)</h3>
                     <p style="margin: 15px 0; font-size: 0.9rem; color: var(--text-dim);">Full-stack web application
                         built with Java 21, Spring Boot 3, React 19, and MySQL. Fully containerized with Docker
-                        Compose, featuring live search, real-time API health monitoring, and complete CRUD operations.
+                        Compose. Performed manual testing of CRUD operations, user workflows, API endpoints, input
+                        validation, responsive UI, and application error handling. Tested REST APIs using Postman and
+                        verified database operations using SQL.
                     </p>
                     <div class="skills-grid" style="justify-content: flex-start; margin-bottom: 20px;">
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Manual Testing</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">API Testing</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Postman</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Functional Testing</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">UI Testing</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">REST API</span>
+                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">SQL</span>
                         <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Java 21</span>
                         <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Spring Boot 3</span>
                         <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">React 19</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">MySQL</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Spring Data JPA</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">REST API</span>
                         <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Docker</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Docker Compose</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Maven</span>
-                        <span class="skill-tag" style="padding: 2px 10px; font-size: 0.75rem;">Git</span>
                     </div>
                     <a href="https://github.com/vishalLavare/java_project.git" target="_blank" rel="noopener noreferrer"
                         class="btn btn-github">GitHub
@@ -447,8 +466,8 @@
     <section id="contact" class="container" style="text-align: center;">
         <!-- <h2 class="section-title reveal">Let's <span class="gradient-text">Connect</span></h2> -->
         <div class="reveal">
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">Open for opportunities in DevOps engineering, cloud
-                automation and Junior Database Administrator .</p>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Open to opportunities in Cloud Engineering, AWS/DevOps,
+                and Manual/API Testing roles.</p>
             <div class="social-links">
                 <a href="mailto:vslavare@gmail.com" title="Email" class="email-link" style="color: var(--primary);"><i
                         class="fas fa-envelope"></i>
